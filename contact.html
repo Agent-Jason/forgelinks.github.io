@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Forge Link</title>
+  <meta name="description" content="Get in touch with Forge Link. Book a demo of our AI agents for construction.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1f517;</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Forge<span>Link</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary" style="padding:10px 24px;font-size:0.9rem;">Get a Demo</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="fade-in">Get in <span class="text-accent">Touch</span></h1>
+      <p class="fade-in">Ready to see how Forge Link can streamline your construction operations? Let's talk.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="fade-in">
+          <h2>Book a Demo</h2>
+          <p style="margin-bottom: 32px;">Fill out the form and we'll set up a live walkthrough using your actual document types.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" required placeholder="john@yourcompany.com">
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" required placeholder="Your construction company">
+            </div>
+            <div class="form-group">
+              <label for="role">Your Role</label>
+              <select id="role" name="role">
+                <option value="">Select your role...</option>
+                <option value="owner">Owner / Principal</option>
+                <option value="pm">Project Manager</option>
+                <option value="office-manager">Office Manager</option>
+                <option value="superintendent">Superintendent</option>
+                <option value="estimator">Estimator</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interest">What are you most interested in?</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option...</option>
+                <option value="construction-admin">Construction Admin Agent (RFIs, action items)</option>
+                <option value="invoice-to-cash">Invoice-to-Cash Agent (billing, AR)</option>
+                <option value="both">Both agents</option>
+                <option value="custom">Custom agent for my workflow</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your workflow</label>
+              <textarea id="message" name="message" placeholder="What's the most time-consuming paperwork in your operation? What document types do you deal with daily?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Request &rarr;</button>
+          </form>
+
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 14px;">We'll respond within one business day. No spam, no sales sequences — just a real conversation about your workflow.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="fade-in">
+          <div class="service-visual" style="margin-bottom: 32px;">
+            <h3 style="margin-bottom: 20px;">What to Expect</h3>
+            <ul class="checklist">
+              <li>15-minute intro call to understand your workflow</li>
+              <li>Live demo using real construction document scenarios</li>
+              <li>Bring your own files — we'll process them on the spot</li>
+              <li>No commitment, no pressure</li>
+            </ul>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@forgelink.ai">hello@forgelink.ai</a></p>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Based In</h3>
+            <p>Working with construction teams across North America</p>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Response Time</h3>
+            <p>Within one business day</p>
+          </div>
+
+          <div class="service-visual" style="margin-top: 32px;">
+            <div class="terminal">
+              <span class="comment">// What a demo looks like</span><br><br>
+              <span class="prompt">&gt;</span> You bring your emails &amp; reports<br>
+              <span class="prompt">&gt;</span> We feed them to the agent<br>
+              <span class="prompt">&gt;</span> You review the output live<br>
+              <span class="prompt">&gt;</span> You decide if it's useful<br><br>
+              <span class="output">That's it. No slides. No pitch deck.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Forge<span>Link</span></div>
+          <p>AI agents purpose-built for the construction industry. Less paperwork. More building.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="contact.html">Book a Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Forge Link. All rights reserved.</span>
+        <span>Built for builders.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

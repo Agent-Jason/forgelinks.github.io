@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examples — Forge Link</title>
+  <meta name="description" content="See Forge Link agents in action — real construction scenarios processed end-to-end.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1f517;</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Forge<span>Link</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="examples.html" class="active">Examples</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary" style="padding:10px 24px;font-size:0.9rem;">Get a Demo</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="fade-in">Live <span class="text-accent">Examples</span></h1>
+      <p class="fade-in">Real construction scenarios. Real messy inputs. Real structured outputs. See exactly what our agents produce.</p>
+    </div>
+  </header>
+
+  <!-- Example 1: Construction Project Admin -->
+  <section class="section" id="construction-admin">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 60px;">
+        <span class="tag" style="display:inline-block; padding:6px 18px; background:var(--accent-glow); border-radius:50px; font-size:0.8rem; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em;">Example 01</span>
+        <h2 class="fade-in" style="margin-top: 16px;">Construction Project Admin Agent</h2>
+        <p class="section-subtitle fade-in">A beam-duct conflict surfaces on an $18.4M medical center expansion. Information is scattered across four email threads, a field report, coordination drawings, and meeting minutes. The PM needs a formal RFI drafted — fast.</p>
+      </div>
+
+      <!-- The Scenario -->
+      <div class="service-block fade-in">
+        <div class="service-info">
+          <h3>The Scenario</h3>
+          <p style="margin-bottom: 20px;">A 2-inch vertical clearance conflict is discovered between a structural beam and a mechanical supply duct in the Level 1 mechanical room. Multiple parties are involved — the owner, architect, GC, and mechanical subcontractor — each with different pieces of the puzzle spread across different communications.</p>
+          <h3 style="margin-top: 24px;">What Goes In</h3>
+          <ul class="checklist">
+            <li><strong>4-email thread</strong> — Owner, architect, GC, and sub discussing the conflict over 3 days</li>
+            <li><strong>Sub field report</strong> — Mechanical contractor's field observations with 3 resolution options and cost estimates</li>
+            <li><strong>Meeting minutes</strong> — Excerpt from prior OAC meeting where the issue was first mentioned</li>
+            <li><strong>Field photos</strong> — Images showing the beam-duct conflict at grid B-3/B-4</li>
+            <li><strong>Coordination drawings</strong> — MEP markup showing the duct routing conflict</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="terminal">
+            <span class="comment">// Agent ingesting the mess</span><br><br>
+            <span class="prompt">&gt; Reading</span> email-thread.md (4 emails, 3 parties)<br>
+            <span class="prompt">&gt; Reading</span> sub-field-report.md (8 observations)<br>
+            <span class="prompt">&gt; Reading</span> meeting-minutes-excerpt.md<br>
+            <span class="prompt">&gt; Reading</span> field-photo-1.png, field-photo-2.png<br>
+            <span class="prompt">&gt; Reading</span> coordination-drawing.png<br><br>
+            <span class="output">Context assembled: 6 files, 4 parties,</span><br>
+            <span class="output">12 drawing refs, 3 spec sections</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- What Comes Out -->
+      <div class="service-block reverse fade-in" style="margin-top: 40px;">
+        <div class="service-info">
+          <h3>What Comes Out</h3>
+          <p style="margin-bottom: 20px;">In under 30 seconds, the agent produces a complete package — all formatted, referenced, and ready for the PM to review before submission.</p>
+          <ul class="checklist">
+            <li><strong>Issue Classification</strong> — Field Conflict identified at 95% confidence with sub-issues flagged (RFI needed, schedule concern, coordination gap)</li>
+            <li><strong>Draft RFI-042</strong> — Complete with subject, description, drawing references (S-301, M-301), spec sections (23 07 13), 3 resolution options from the sub, schedule impact statement, and response deadline</li>
+            <li><strong>Action Item Log</strong> — 6 tasks extracted with owners, due dates, priorities, and dependencies across 4 responsible parties</li>
+            <li><strong>Project Log Entry</strong> — Archival record with issue summary, parties, referenced documents, and current status</li>
+            <li><strong>Risk Flags</strong> — 5-7 day schedule delay if unresolved by deadline; verbal approval from architect needs written confirmation</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="terminal">
+            <span class="comment">// Agent output summary</span><br><br>
+            <span class="prompt">&gt; Classified</span> <span class="output">Field Conflict</span> (95%)<br>
+            <span class="prompt">&gt; Location</span> Grid B-3/B-4, Level 1 Mech Room<br>
+            <span class="prompt">&gt; References</span> <span class="file">S-301, M-301, Spec 23 07 13</span><br><br>
+            <span class="prompt">&gt; Generated</span> <span class="output">RFI-042</span><br>
+            <span class="output">&nbsp; Subject: Beam conflicts with mech duct</span><br>
+            <span class="output">&nbsp; Options: Web penetration / Re-route / Lower</span><br>
+            <span class="output">&nbsp; Impact: 5-7 day delay if not resolved by Apr 4</span><br><br>
+            <span class="prompt">&gt; Extracted</span> <span class="output">6 action items</span><br>
+            <span class="output">&nbsp; 2 Critical, 3 High, 1 Normal</span><br><br>
+            <span class="prompt">&gt; Flagged</span> <span style="color:#f87171;">Verbal approval needs documentation</span><br>
+            <span class="prompt">&gt; Flagged</span> <span style="color:#f87171;">Electrical coordination not addressed</span>
+          </div>
+          <div class="pipeline">
+            <span class="pipeline-step">Ingest</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Classify</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Draft RFI</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Actions</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Log</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Saved -->
+      <div class="fade-in" style="text-align:center; margin-top:48px; padding:32px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);">
+        <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); border:none;">
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number">30-45min</div>
+            <div class="stat-label">Manual time per issue</div>
+          </div>
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number" style="color: var(--text-primary);">&rarr;</div>
+            <div class="stat-label">&nbsp;</div>
+          </div>
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number">~30s</div>
+            <div class="stat-label">Review time with Forge Link</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div style="height:1px; background:linear-gradient(90deg, transparent, var(--border), transparent);"></div>
+
+  <!-- Example 2: Invoice-to-Cash -->
+  <section class="section" id="invoice-to-cash" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 60px;">
+        <span class="tag" style="display:inline-block; padding:6px 18px; background:var(--accent-glow); border-radius:50px; font-size:0.8rem; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em;">Example 02</span>
+        <h2 class="fade-in" style="margin-top: 16px;">Invoice-to-Cash Agent</h2>
+        <p class="section-subtitle fade-in">A site grading job is complete — but there were scope changes, a verbal-only change order, and the customer needs an invoice by their AP closing date. Meanwhile, another customer's invoice is 47 days overdue.</p>
+      </div>
+
+      <!-- The Scenario -->
+      <div class="service-block fade-in">
+        <div class="service-info">
+          <h3>The Scenario</h3>
+          <p style="margin-bottom: 20px;">Greenfield Development ordered Phase 4 site grading ($18,250 quoted). The field crew completed the work but installed 200 LF of extra silt fence (verbal approval only) and performed 4 SWPPP inspections instead of the 3 quoted (county requirement). The customer needs the invoice for their April 10 AP closing. Meanwhile, Prestige Commercial has Invoice #1087 unpaid for 47 days.</p>
+          <h3 style="margin-top: 24px;">What Goes In</h3>
+          <ul class="checklist">
+            <li><strong>Original quote</strong> — 8 line items with unit prices, quantities, and totals for the site grading scope</li>
+            <li><strong>Work completion email</strong> — From the field foreman detailing what was actually done, including extras</li>
+            <li><strong>Customer email</strong> — Requesting the invoice by April 10 AP close, mentioning future Phase 5 work</li>
+            <li><strong>Overdue invoice</strong> — Prestige Commercial, Invoice #1087, $8,450, now 47 days past due</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="terminal">
+            <span class="comment">// Agent ingesting billing data</span><br><br>
+            <span class="prompt">&gt; Reading</span> original-quote.md (8 line items)<br>
+            <span class="prompt">&gt; Reading</span> work-completion-email.md<br>
+            <span class="prompt">&gt; Reading</span> customer-email.md<br>
+            <span class="prompt">&gt; Reading</span> overdue-invoice.md (47 days past due)<br><br>
+            <span class="output">Context assembled: quote, actuals,</span><br>
+            <span class="output">2 change orders, 1 overdue account</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- What Comes Out -->
+      <div class="service-block reverse fade-in" style="margin-top: 40px;">
+        <div class="service-info">
+          <h3>What Comes Out</h3>
+          <p style="margin-bottom: 20px;">The agent produces the full billing package — reconciliation, invoice, email draft, overdue reminders, and an updated AR dashboard.</p>
+          <ul class="checklist">
+            <li><strong>Billing Reconciliation</strong> — Every quote line item compared against actual work: completed as quoted, modified, or added. Change orders itemized with approval type flagged</li>
+            <li><strong>Invoice #1092</strong> — Professional invoice with original scope, change order section, deposit applied, total due ($12,375), payment terms, and bank details. Generated as JSON, Markdown, and PDF</li>
+            <li><strong>Send Email</strong> — Customer-friendly email with invoice attached, amount due, due date highlighted, and a note about their Phase 5 quote request</li>
+            <li><strong>Overdue Reminders</strong> — Three-tier escalation for Prestige Commercial: friendly (7-day), firm (14-day), and final notice (30+ day) with late fee calculations</li>
+            <li><strong>AR Dashboard</strong> — Total outstanding, aging buckets, customer risk scores, and follow-up schedule</li>
+            <li><strong>Risk Flags</strong> — Verbal-only silt fence approval needs written CO; Prestige account approaching collections threshold</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="terminal">
+            <span class="comment">// Agent output summary</span><br><br>
+            <span class="prompt">&gt; Reconciled</span> 8 line items<br>
+            <span class="output">&nbsp; 6 completed as quoted</span><br>
+            <span class="output">&nbsp; 1 modified (extra SWPPP inspection)</span><br>
+            <span class="output">&nbsp; 1 added (200 LF silt fence)</span><br><br>
+            <span class="prompt">&gt; Change Orders</span> <span class="output">+$2,750.00</span><br>
+            <span class="prompt">&gt; Flagged</span> <span style="color:#f87171;">Silt fence CO: verbal only</span><br><br>
+            <span class="prompt">&gt; Invoice</span> <span class="file">#1092 — $12,375.00</span><br>
+            <span class="prompt">&gt; Email</span> drafted for Greenfield Dev<br><br>
+            <span class="prompt">&gt; Overdue</span> <span style="color:#f87171;">INV-1087 — $8,450 (47 days)</span><br>
+            <span class="output">&nbsp; Tier 1, 2, 3 reminders generated</span><br>
+            <span class="output">&nbsp; Late fee: $126.75 applied</span><br><br>
+            <span class="prompt">&gt; AR Total</span> <span class="output">$28,450 outstanding</span>
+          </div>
+          <div class="pipeline">
+            <span class="pipeline-step">Ingest</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Reconcile</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Invoice</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">Email</span>
+            <span class="pipeline-arrow">&rarr;</span>
+            <span class="pipeline-step">AR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Saved -->
+      <div class="fade-in" style="text-align:center; margin-top:48px; padding:32px; background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius);">
+        <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); border:none;">
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number">1-2hrs</div>
+            <div class="stat-label">Manual billing cycle per job</div>
+          </div>
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number" style="color: var(--text-primary);">&rarr;</div>
+            <div class="stat-label">&nbsp;</div>
+          </div>
+          <div class="stat-item" style="padding:20px; border:none;">
+            <div class="stat-number">~30s</div>
+            <div class="stat-label">Review and approve with Forge Link</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="fade-in">Want to See Your Own Data Processed?</h2>
+      <p class="fade-in">Bring your emails, invoices, and field reports. We'll run them through the agent live — no pitch deck, just real output.</p>
+      <a href="contact.html" class="btn btn-primary fade-in">Book a Live Demo &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Forge<span>Link</span></div>
+          <p>AI agents purpose-built for the construction industry. Less paperwork. More building.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="examples.html">Examples</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="contact.html">Book a Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Forge Link. All rights reserved.</span>
+        <span>Built for builders.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
