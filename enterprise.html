@@ -36,7 +36,7 @@
         Your Company's Private
         <span class="line2">AI Workforce</span>
       </h1>
-      <p class="fade-in" style="margin-top: 24px;">Not a chatbot. Not a SaaS subscription. A custom-built AI operating layer — designed around your workflows, deployed inside your environment, and compounding in value every day it runs.</p>
+      <p class="fade-in" style="margin-top: 24px;">Not a chatbot. Not a generic tool. A custom-built AI operating layer — designed around your workflows, deployed inside your environment, and compounding in value every day it runs.</p>
       <div class="hero-values fade-in">
         <div class="hero-value"><span class="dot"></span> Custom-Built for Your Process</div>
         <div class="hero-value"><span class="dot"></span> Private &amp; Controlled</div>
@@ -89,14 +89,61 @@
           <p style="margin-bottom: 16px;">Some workflows need parallel agents processing high-volume intake simultaneously. Others require agents working from shared context — interpreting, drafting, validating, and supporting approvals in coordinated stages. Some need hierarchical structures where specialized agents handle distinct phases of a complex process.</p>
           <p>We don't force your business into a template. We architect the agent collaboration pattern that fits your process, your team structure, and your decision flow.</p>
         </div>
-        <div class="pillar-visual">
-          <h4>Agent Architectures We Build</h4>
-          <ul>
-            <li><strong>Parallel Processing</strong> — Multiple agents handling high-volume intake, classification, and routing simultaneously</li>
-            <li><strong>Shared-Context Teams</strong> — Agents working from a common knowledge base, each contributing domain-specific expertise</li>
-            <li><strong>Staged Pipelines</strong> — Sequential agents for interpretation, retrieval, drafting, validation, and approval support</li>
-            <li><strong>Supervisor Patterns</strong> — Orchestrator agents that delegate, verify, and assemble work from specialist agents</li>
-          </ul>
+        <div>
+          <div class="arch-diagrams">
+            <!-- Hierarchical -->
+            <div class="arch-diagram">
+              <h4>Hierarchical</h4>
+              <div class="hier-top">
+                <div class="diagram-node supervisor">Lead</div>
+              </div>
+              <div class="hier-arrow"><span>&#x2193;</span><span>&#x2193;</span></div>
+              <div class="hier-mid">
+                <div class="diagram-node">Draft</div>
+                <div class="diagram-node">Review</div>
+              </div>
+              <div class="hier-arrow"><span>&#x2193;</span><span>&#x2193;</span></div>
+              <div class="hier-bot">
+                <div class="diagram-node small">A1</div>
+                <div class="diagram-node small">A2</div>
+                <div class="diagram-node small">A3</div>
+                <div class="diagram-node small">A4</div>
+              </div>
+              <p>Supervisor delegates and verifies. Best for complex, multi-phase workflows.</p>
+            </div>
+            <!-- Mesh / Cross-Verifying -->
+            <div class="arch-diagram">
+              <h4>Cross-Verifying</h4>
+              <div class="mesh-grid">
+                <div></div>
+                <div class="mesh-center"><div class="diagram-node small">Audit</div></div>
+                <div></div>
+                <div class="mesh-center"><div class="diagram-node small">Draft</div></div>
+                <div class="mesh-center"><div class="diagram-node supervisor" style="width:52px;height:52px;">Hub</div></div>
+                <div class="mesh-center"><div class="diagram-node small">Check</div></div>
+                <div></div>
+                <div class="mesh-center"><div class="diagram-node small">Data</div></div>
+                <div></div>
+              </div>
+              <p>All agents connected. Each verifies the others. Best for accuracy-critical work.</p>
+            </div>
+            <!-- Sequential -->
+            <div class="arch-diagram">
+              <h4>Sequential Pipeline</h4>
+              <div class="seq-flow">
+                <div class="diagram-node small">Ingest</div>
+                <span class="seq-arrow">&rarr;</span>
+                <div class="diagram-node small">Parse</div>
+                <span class="seq-arrow">&rarr;</span>
+                <div class="diagram-node small">Draft</div>
+                <span class="seq-arrow">&rarr;</span>
+                <div class="diagram-node small">Valid.</div>
+                <span class="seq-arrow">&rarr;</span>
+                <div class="diagram-node small">Out</div>
+              </div>
+              <p>Step-by-step handoff. Each agent completes before the next begins. Best for structured document flows.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -113,15 +160,91 @@
           <p style="margin-bottom: 16px;">ForgeLinks transforms that fragmented knowledge into a structured company memory layer. This memory lives inside your business, is accessible to your AI agents, and compounds over time. It reduces repeated explanation, improves accuracy, preserves institutional knowledge through staff transitions, and creates reusable internal datasets for future workflows.</p>
           <p>Better models will always be available. But long-term advantage comes from having structured internal data, process history, and usable company memory. <strong style="color: var(--text-primary);">Companies that start building operational memory now will be better positioned when AI becomes more deeply integrated into every part of business operations.</strong></p>
         </div>
-        <div class="pillar-visual">
-          <h4>What Company Memory Enables</h4>
-          <ul>
-            <li><strong>Zero re-explanation</strong> — Agents already know your projects, clients, standards, and preferences</li>
-            <li><strong>Institutional continuity</strong> — Knowledge survives staff turnover and team changes</li>
-            <li><strong>Improving accuracy</strong> — Every completed workflow makes the next one more precise</li>
-            <li><strong>Reusable datasets</strong> — Structured records that feed future models and future workflows</li>
-            <li><strong>Compounding value</strong> — The system gets more valuable every month it operates</li>
-          </ul>
+        <div class="memory-diagram">
+          <h4 style="font-size:0.85rem; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:20px; text-align:center;">Structured Company Memory System</h4>
+
+          <!-- Input Sources -->
+          <div class="memory-layer">
+            <div class="memory-layer-label">Raw Sources</div>
+            <div class="memory-layer-items">
+              <div class="memory-item">Emails</div>
+              <div class="memory-item">Reports</div>
+              <div class="memory-item">Approvals</div>
+              <div class="memory-item">Decisions</div>
+              <div class="memory-item">Templates</div>
+              <div class="memory-item">Exceptions</div>
+            </div>
+          </div>
+
+          <div class="memory-arrows">
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+          </div>
+
+          <!-- Memory Engine -->
+          <div class="memory-engine">Memory Extraction &amp; Structuring Engine</div>
+
+          <div class="memory-arrows">
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+          </div>
+
+          <!-- Structured Memory Layers -->
+          <div class="memory-layer">
+            <div class="memory-layer-label" style="background:var(--accent);">Project Memory</div>
+            <div class="memory-layer-items">
+              <div class="memory-item active">Active projects</div>
+              <div class="memory-item active">Milestones</div>
+              <div class="memory-item active">Key decisions</div>
+              <div class="memory-item active">Contacts</div>
+            </div>
+          </div>
+
+          <div class="memory-layer" style="margin-top: 8px;">
+            <div class="memory-layer-label" style="background:#1e40af;">Process Memory</div>
+            <div class="memory-layer-items">
+              <div class="memory-item">Workflows</div>
+              <div class="memory-item">Standards</div>
+              <div class="memory-item">Approval chains</div>
+              <div class="memory-item">Templates</div>
+            </div>
+          </div>
+
+          <div class="memory-layer" style="margin-top: 8px;">
+            <div class="memory-layer-label" style="background:#1e3a5a;">Feedback Loop</div>
+            <div class="memory-layer-items">
+              <div class="memory-item">Corrections</div>
+              <div class="memory-item">Preferences</div>
+              <div class="memory-item">Edge cases</div>
+              <div class="memory-item">Validated outputs</div>
+            </div>
+          </div>
+
+          <div class="memory-layer" style="margin-top: 8px;">
+            <div class="memory-layer-label" style="background:#334155;">Reference Index</div>
+            <div class="memory-layer-items">
+              <div class="memory-item">External systems</div>
+              <div class="memory-item">Document paths</div>
+              <div class="memory-item">Vendor info</div>
+              <div class="memory-item">Regulations</div>
+            </div>
+          </div>
+
+          <div class="memory-arrows">
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+            <div class="memory-arrow-down">&#x2193;</div>
+          </div>
+
+          <!-- Output -->
+          <div class="memory-outputs">
+            <div class="memory-output">Context-aware agents</div>
+            <div class="memory-output">Zero re-explanation</div>
+            <div class="memory-output">Compounding accuracy</div>
+            <div class="memory-output">Institutional continuity</div>
+          </div>
         </div>
       </div>
     </div>
