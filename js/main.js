@@ -55,25 +55,4 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// --- Contact form handling (basic) ---
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    // If using Formspree or similar, let it handle the submission.
-    // If no backend is configured, show a local confirmation.
-    const action = contactForm.getAttribute('action');
-    if (action && action.includes('YOUR_FORM_ID')) {
-      e.preventDefault();
-      const btn = contactForm.querySelector('button[type="submit"]');
-      btn.textContent = 'Message Received!';
-      btn.style.background = '#10b981';
-      btn.disabled = true;
-
-      // Show a simple confirmation
-      const msg = document.createElement('p');
-      msg.textContent = 'Thanks for your interest! This is a demo form — in production, connect it to Formspree, Netlify Forms, or your email backend.';
-      msg.style.cssText = 'color: #10b981; margin-top: 16px; font-weight: 600;';
-      contactForm.appendChild(msg);
-    }
-  });
-}
+// --- Contact form — Formspree handles submission ---
